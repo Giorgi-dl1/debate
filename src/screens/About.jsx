@@ -1,6 +1,8 @@
 import '../styles/About.css';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { useState } from 'react';
+import RateSystem from '../components/RateSystem';
+import Rules from '../components/Rules';
 export default function About() {
   const [show, setShow] = useState(false);
   const clickHandler = (name) => {
@@ -31,10 +33,7 @@ export default function About() {
               className={show === 'rules' ? 'rotate icon' : 'icon'}
             />
           </div>
-          <div className={show === 'rules' ? 'content show' : 'content'}>
-            saghdsja asdkjajsdjk asdjkjadksjksadjk adsjkjdasjksdak
-            dsakjjkasdkjdsa akjdsakjadksj dskjasdjkkjasd asdkjsadjkn
-          </div>
+          <Rules show={show} />
         </div>
         <div
           className={
@@ -54,21 +53,10 @@ export default function About() {
               className={show === 'review' ? 'rotate icon' : 'icon'}
             />
           </div>
-          <div className={show === 'review' ? 'content show' : 'content'}>
-            saghdsja asdkjajsdjk asdjkjadksjksadjk adsjkjdasjksdak
-            dsakjjkasdkjdsa akjdsakjadksj dskjasdjkkjasd asdkjsadjkn
-          </div>
+          <RateSystem show={show} />
         </div>
       </div>
       <div className={show ? 'info small' : 'info'}>information</div>
     </div>
   );
 }
-/* <div className="boxes-wrapper">
-        <div className="boxes">
-          <div className="box">1</div>
-          <div className="box">2</div>
-          <div className="box">3</div>
-          <div className="box">4</div>
-        </div>
-      </div> */
