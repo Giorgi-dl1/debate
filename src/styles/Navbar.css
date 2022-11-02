@@ -2,7 +2,9 @@ nav {
   margin: 0 3rem;
   padding: 1rem 0;
 }
-
+.border-b {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.39);
+}
 ul.flex-between {
   gap: 2rem;
 }
@@ -22,14 +24,4 @@ ul.flex-between li a:hover {
 ul.flex-between .active a {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
-}
-.login {
-  padding: 1rem 1.5rem;
-  background-color: var(--main-color);
-  color: white;
-  border-radius: 7px;
-  cursor: pointer;
-}
-.login:hover {
-  opacity: 0.7;
 }

@@ -1,23 +1,26 @@
 .aboutscreen {
   display: flex;
-  gap: 2rem;
   margin-top: 7rem;
 }
-.info {
-  flex: 2;
-  transition: 0.5s;
-}
+
 .team-div {
   display: flex;
   align-items: center;
   margin-left: 50%;
   gap: 1rem;
-  transform: translateX(-50%);
+  transform: translateX(-60%);
 }
 .boxes {
   display: flex;
   align-items: center;
   gap: 2rem;
+  max-width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.show .boxes {
+  max-width: 100vw;
+  overflow: visible;
 }
 .box {
   width: 100px;
@@ -36,11 +39,10 @@
   flex: 1;
   transition: 0.5s;
   gap: 5rem;
-  transition: 0.5s;
 }
 .dropdown-item-wrapper {
   position: relative;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .dropdown-item {
@@ -52,7 +54,7 @@
   color: white;
   border-radius: 7px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 1s;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,7 +65,7 @@
 .content {
   max-height: 0;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 1s;
 }
 .icon {
   display: flex;
@@ -81,8 +83,15 @@
 .dropdown.large {
   flex: 2;
 }
+.info {
+  flex: 4;
+  transition: 1s;
+  margin-top: -70px;
+}
 .info.small {
-  display: none;
+  flex: none;
+  width: 0;
+  overflow: hidden;
 }
 .dropdown-item.right {
   left: 35%;
@@ -103,10 +112,10 @@
   padding-bottom: 2rem;
 }
 .desc span {
-  width: 245px;
+  width: 260px;
 }
-.line {
-  width: 60%;
+.show .desc .line {
+  width: 53%;
   border-top: 1px solid black;
   transform: translateY(10px);
   padding-top: 0.5rem;
@@ -114,5 +123,5 @@
   justify-content: space-evenly;
 }
 .rules-text {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
