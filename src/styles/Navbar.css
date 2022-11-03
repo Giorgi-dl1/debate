@@ -25,3 +25,36 @@ ul.flex-between .active a {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
 }
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-items {
+  position: absolute;
+  background-color: white;
+  left: -1rem;
+  top: 3.8rem;
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+.nav-dropdown-items.show-items {
+  box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.219);
+  max-height: 100vh;
+}
+.nav-dropdown .styled-button {
+  gap: 0.5rem;
+}
+.nav-dropdown-label {
+  padding: 0.7rem 1.3rem;
+  font-size: 1.3rem;
+}
+.nav-dropdown-item {
+  padding: 0.7rem 1.3rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-dropdown-item:hover {
+  background-color: #ccc;
+}

@@ -1,0 +1,19 @@
+.teamscreen-form-wrapper {
+  display: grid;
+  place-content: center;
+  margin-top: 20vh;
+}
+.teamscreen {
+  margin-top: 3rem;
+}
+.team-info {
+  display: flex;
+  gap: 2rem;
+}
+.team-name {
+  font-size: 2rem;
+}
+.team-info-details {
+  padding-right: 1.5rem;
+  border-right: 2px solid rgba(2, 2, 2, 0.362);
+}
