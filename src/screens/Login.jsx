@@ -35,7 +35,7 @@ export default function Login() {
     if (userInfo) {
       navigate("/");
     }
-  }, [userInfo]);
+  }, [userInfo, navigate]);
   return (
     <div className="wrapper loginscreen">
       <form onSubmit={handleSubmit}>
