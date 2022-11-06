@@ -104,7 +104,6 @@ const reducer = (state, action) => {
       const key = action.payload.key;
       const userId = action.payload.id;
       const usersTeam = state.teams.filter((team) => team.key === key)[0];
-
       if (usersTeam) {
         const updatedUsers = state.users.map((user) => {
           if (user.id === userId) {
