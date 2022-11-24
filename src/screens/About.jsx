@@ -69,7 +69,7 @@ export default function About() {
               show === 'quests' ? 'dropdown-item right' : 'dropdown-item left'
             }
           >
-            <span>შეფასების სისტემა</span>
+            <span>შესარჩევი კითხვარი</span>
             <AiOutlineArrowDown
               className={show === 'quests' ? 'rotate icon' : 'icon'}
             />
