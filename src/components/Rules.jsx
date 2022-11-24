@@ -71,22 +71,48 @@ export default function Rules({ show }) {
         </div>
       </div>
       <div className="rules-text">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus qui
-        placeat iste, aut pariatur omnis officiis culpa, magnam quia cum saepe
-        et. Sunt nobis aspernatur voluptates officia iure cum similique. Placeat
-        eaque fuga voluptatum inventore repellat et minima, magnam, nihil
-        pariatur ea labore architecto quaerat deserunt consequatur aliquam animi
-        dolores impedit accusantium nemo id ab fugiat? Iste porro et architecto?
-        Provident assumenda repellendus et temporibus, nulla suscipit enim dolor
-        nemo soluta explicabo commodi eius blanditiis natus dolorum consequuntur
-        non aut. At quasi maiores, rerum dolore numquam dolorum hic quae
-        consequuntur! Ex ducimus deleniti fugiat temporibus praesentium iste
-        modi aliquam nemo, fuga autem fugit dolorem ipsa quam hic eum minima
-        repudiandae perspiciatis asperiores. Maxime nihil veniam ullam quos ea,
-        doloremque neque. Totam est, architecto porro cum quis magnam dolore
-        distinctio eum consectetur eius ducimus similique maxime optio quod
-        sapiente aperiam repellendus doloribus. Quae vero voluptatum, natus
-        labore maiores dolorem sunt ea.
+        <h4>თემის წარდგენის დანაწილება გუნდის წევრებისთვის:</h4>
+        <div>
+          1)გუნდის პირველი მონაწილე ზოგადად მიმოიხილავს საკითხს და კონკრეტულ,ან
+          ზოგად მიმართულებას აძლევს თემას. გუნდის პირველ მონაწილეს თემის
+          წარდგენის შემდეგ არ ესმევა კითხვები და მასზე არ ვრცელდება პოლემიკის
+          რეჟიმი,თუმცა რეგლამენტით მას ეძლევა საშუალება დასვას კითხვები და
+          წარმართოს პოლემიკის რეჟიმი.
+        </div>
+        <div>
+          2)გუნდის მეორე მონაწილე წარმოადგენს არგუმენტებს და თავის გამოსვლაში ის
+          იწყებს წარმოდგენილი არგუმენტების ლოგიკურ დასაბუთებას.
+        </div>
+        <div>
+          3) მესამე გამომსვლელი ამყარებს მეორე გამომსვლელის არგუმენტებს და
+          დებატის პროცესში შემოაქვს ახალი არგუმენტები,რასაც ახლავს ლოგიკური
+          დასაბუთება.
+        </div>
+        <div>
+          4)მეოთხე გამომსვლელი აჯამებს სამივე გამომსვლელის პოზიციას, საუბრობს
+          მოწინააღმდეგე გუნდის სუსტ მხარეებზე და სრულყოფს საკუთარი გუნდის
+          პოზიციას. <br /> * ერთ გამომსვლელთან გარდა პირველისა, მოწინააღმდეგე
+          გუნდის ყველა წევრს ეძლევა ერთი შეკითხვის დასმის
+          საშუალება,შესაძლებებლია ოთხივე კითხვა გუნდის ერთმა წევრმაც დასვას.ერთ
+          კითხვას რეგლამენტით ენიჭება 1წთ,ხოლო პასუხს 2წთ,რაც ჯამში სამ წუთს
+          მოიცავს.
+          <br /> * პოლემიკის რეჟიმის წარმართვა შეუძლია გუნდის ნებისმიერ წევრს,
+          რისთვისაც რეგლამენტით გათვალისწინებულია 5წთ. პოლემიკა დგება გამომსვლელ
+          მონაწილესა და მოწინააღმდეგე გუნდის ერთ წევრს შორის (რომელსაც გუნდი
+          ირჩევს). გუნდის პირველ წევრთან პოლემიკა არ დგება,თუმცა გუნდის პირველ
+          წევრს შეუძლია პოლემიკის გამართვა მოწინააღმდეგე გუნდის ნებისმიერ
+          წევრთან, გარდა პირველისა!
+        </div>
+        <h4>დამატებეითი წესები:</h4>
+        <div>
+          1)დამსწრე აუდიტორიას ეძლევა სამი რეპლიკის გაკეთების საშუალება,თითოეულ
+          გუნდთან მიმართებით (რეპლიკის დრო 2წთ).
+        </div>
+        <div>
+          2)ორგანიზატორებს რომლებიც ასევე პასუხისმგებლები არიან პროცესის
+          ფორმატის მიხედვით წარმართვაზე, ეძლევათ ორი კითხვის დასმის საშუალება
+          (კითხვების დრო 3წთ).
+        </div>
       </div>
     </div>
   );
