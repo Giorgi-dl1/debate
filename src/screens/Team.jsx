@@ -1,7 +1,7 @@
 import { useContext, useRef, useState } from "react";
+import Rate from "../components/Rate";
 import { Store } from "../Store";
 import "../styles/Team.css";
-import calculateTotal, { objSum } from "../utils";
 export default function Team() {
   const { state, dispatch } = useContext(Store);
   const { userInfo, teams } = state;
@@ -44,61 +44,9 @@ export default function Team() {
               <div>შეფასება არ მოიძებნა</div>
             ) : (
               <>
+                <h4 className="header">შეფასებები</h4>
                 {team.stages.map((stage) => (
-                  <>
-                    <h4 className="header">{stage.name}</h4>
-                    <div className="team-rate">
-                      <div className="criteriums">
-                        <div className="criterium">
-                          არგუმენტირებული მსჯელობა
-                        </div>
-                        <div className="criterium">ადეკვატური შეკითხვები</div>
-                        <div className="criterium">გუნდურობა</div>
-                        <div className="criterium">
-                          საკითხის ადეკვატურად გაგება
-                        </div>
-                        <div className="criterium">ანალიტიკური მსჯელობა</div>
-                        <div className="criterium">ორატორულად მეტყველება</div>
-                        <div className="criterium">
-                          ამომწურავი პასუხების გაცემა
-                        </div>
-                        <div className="criterium mt">ჯამი</div>
-                      </div>
-                      <div className="rate-cols">
-                        {stage.rates.map((item) => (
-                          <div className="rate-col">
-                            <div className="col-header">{item.user}</div>
-                            <div className="col-item">
-                              {item.rate.argumentative}
-                            </div>
-                            <div className="col-item">
-                              {item.rate.adequacyQ}
-                            </div>
-                            <div className="col-item">{item.rate.teamwork}</div>
-                            <div className="col-item">
-                              {item.rate.adequacyU}
-                            </div>
-                            <div className="col-item">
-                              {item.rate.analyticity}
-                            </div>
-                            <div className="col-item">{item.rate.oratory}</div>
-                            <div className="col-item">
-                              {item.rate.ComprehensiveA}
-                            </div>
-                            <div className="col-item mt">
-                              {objSum(item.rate)}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      <div className="total-sum">
-                        <div className="criterium">გუნდის ქულა</div>
-                        <div className="col-item">
-                          {calculateTotal(stage.rates)}
-                        </div>
-                      </div>
-                    </div>
-                  </>
+                  <Rate stage={stage} />
                 ))}
               </>
             )}

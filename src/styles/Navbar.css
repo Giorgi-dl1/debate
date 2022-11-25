@@ -111,3 +111,8 @@ ul.flex-between .active a {
     background-color: hsla(0, 0%, 0%, 0.473);
   }
 }
+@media (max-width: 550px) {
+  nav {
+    margin: 0 0.5rem;
+  }
+}

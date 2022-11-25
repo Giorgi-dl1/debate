@@ -1,6 +1,7 @@
 .aboutscreen {
   display: flex;
   margin-top: 7rem;
+  min-height: 100vh;
 }
 
 .team-div {
@@ -159,6 +160,7 @@
   }
   .info {
     order: 1;
+    max-height: 100px;
   }
   .dropdown {
     order: 2;

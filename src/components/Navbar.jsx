@@ -7,7 +7,7 @@ import NavLinks from "./NavLinks";
 export default function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
   const { pathname } = useLocation();
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
   const {
     state: { userInfo },

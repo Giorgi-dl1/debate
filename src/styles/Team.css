@@ -37,7 +37,6 @@
 }
 .rates {
   margin: auto;
-  transform: translatex(-50px);
 }
 .rates h4 {
   margin-bottom: 1rem;
@@ -45,22 +44,25 @@
 
 .criterium {
   border-top: 1px solid rgba(0, 0, 0, 0.404);
-  padding: 0.5rem 0.7rem;
   background-color: rgb(10, 99, 10);
   color: white;
   font-weight: 500;
   width: 299px;
 }
+
 .col-header {
   border: 1px solid rgba(0, 0, 0, 0.397);
-  padding: 0.5rem 0.7rem;
   background-color: hsla(22, 70%, 50%, 0.897);
   color: white;
 }
 .col-item {
-  padding: 0.5rem 0.7rem;
   border-right: 1px solid rgba(0, 0, 0, 0.397);
   border-bottom: 1px solid rgba(0, 0, 0, 0.397);
+}
+.criterium,
+.col-header,
+.col-item {
+  padding: 0.5rem 0.7rem;
 }
 .team-rate {
   display: flex;
@@ -76,13 +78,52 @@
   margin-top: 1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.397);
 }
-.total-sum {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translate3d(110%, -40px, 0);
-  border-left: 1px solid rgba(0, 0, 0, 0.397);
+.total-points {
+  color: var(--main-color);
+  padding-bottom: 1.5rem;
+  font-size: 1.2rem;
 }
-.total-sum .criterium {
-  width: 100px;
+.logo-name img {
+  width: 124px;
+  height: 124px;
+  object-fit: cover;
+}
+@media (max-width: 700px) {
+  .team-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .header {
+    margin-top: 0;
+  }
+  .team-rate {
+    font-size: 12px;
+  }
+  .criterium {
+    width: 140px;
+  }
+  .md {
+    height: 42.5px;
+  }
+  .lg {
+    height: 58.2px;
+  }
+  .col-item {
+    display: grid;
+    place-content: center;
+  }
+  .rate-col {
+    transform: translateY(-7.2%);
+  }
+  .rates {
+    margin: 0;
+  }
+  .criterium,
+  .col-header,
+  .col-item {
+    padding: 0.3rem 0.5rem;
+  }
 }
