@@ -3,9 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Store } from "../Store";
 import "../styles/Navbar.css";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import NavLinks from "./NavLinks";
 export default function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
   const { pathname } = useLocation();
+  const [showMenu, setShowMenu] = useState(true);
   const navigate = useNavigate();
   const {
     state: { userInfo },
@@ -18,69 +20,60 @@ export default function Navbar() {
     navigate("/");
   };
   return (
-    <nav
-      className={
-        pathname === "/login" ? "border-b flex-between" : "flex-between"
-      }
-    >
-      <ul className="flex-between">
-        <li className={pathname === "/" ? "active" : ""}>
-          <Link to="/">ფორმატი</Link>
-        </li>
-        {userInfo && (
-          <>
-            <li className={pathname === "/team" ? "active" : ""}>
-              <Link to="/team">გუნდი</Link>
-            </li>
-            <li className={pathname === "/details" ? "active" : ""}>
-              <Link to="#">დეტალები</Link>
-            </li>
-            <li className={pathname === "/review" ? "active" : ""}>
-              <Link to="#">შეფასება</Link>
-            </li>
-            {userInfo.isAdmin && (
-              <li className={pathname === "/review" ? "active" : ""}>
-                <Link to="#">ადმინი</Link>
-              </li>
-            )}
-          </>
-        )}
-      </ul>
-      {userInfo ? (
-        <div className="nav-dropdown">
-          <div
-            onClick={() => setShowProfile(!showProfile)}
-            className="styled-button flex-between"
-          >
-            <span>პროფილი</span>
-            <AiOutlineArrowDown
-              className={showProfile ? "rotate icon" : "icon"}
-            />
-          </div>
-          <div
-            className={
-              showProfile
-                ? "nav-dropdown-items show-items"
-                : "nav-dropdown-items"
-            }
-          >
-            <div className="nav-dropdown-label">{userInfo.name}</div>
+    <>
+      <nav
+        className={
+          pathname === "/login" ? "border-b flex-between" : "flex-between"
+        }
+      >
+        <div className="windows-screen">
+          <NavLinks userInfo={userInfo} pathname={pathname} />
+        </div>
+        <div className="hamburger" onClick={() => setShowMenu(!showMenu)}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+        {userInfo ? (
+          <div className="nav-dropdown">
             <div
               onClick={() => setShowProfile(!showProfile)}
-              className="nav-dropdown-item"
+              className="styled-button flex-between"
             >
-              პარამეტრები
+              <span>პროფილი</span>
+              <AiOutlineArrowDown
+                className={showProfile ? "rotate icon" : "icon"}
+              />
             </div>
-            <div onClick={logout} className="nav-dropdown-item">
-              გასვლა
+            <div
+              className={
+                showProfile
+                  ? "nav-dropdown-items show-items"
+                  : "nav-dropdown-items"
+              }
+            >
+              <div className="nav-dropdown-label">{userInfo.name}</div>
+              <div
+                onClick={() => setShowProfile(!showProfile)}
+                className="nav-dropdown-item"
+              >
+                პარამეტრები
+              </div>
+              <div onClick={logout} className="nav-dropdown-item">
+                გასვლა
+              </div>
             </div>
           </div>
-        </div>
-      ) : (
-        <Link to="/login">
-          <button className="styled-button">შესვლა</button>
-        </Link>
-      )}
-    </nav>
+        ) : (
+          <Link to="/login">
+            <button className="styled-button">შესვლა</button>
+          </Link>
+        )}
+      </nav>
+      <div className={showMenu ? "show-menu mobile-screen" : "mobile-screen"}>
+        <NavLinks userInfo={userInfo} pathname={pathname} />
+      </div>
+      <div className={showMenu ? "menu-background" : ""} />
+    </>
   );
 }
