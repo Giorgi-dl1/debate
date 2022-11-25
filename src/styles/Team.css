@@ -94,7 +94,7 @@
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
   }
   .header {
     margin-top: 0;
@@ -106,10 +106,10 @@
     width: 140px;
   }
   .md {
-    height: 42.5px;
+    height: 43.5px;
   }
   .lg {
-    height: 58.2px;
+    height: 59.2px;
   }
   .col-item {
     display: grid;
